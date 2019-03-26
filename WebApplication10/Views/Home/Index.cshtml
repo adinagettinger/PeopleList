@@ -1,0 +1,30 @@
+﻿@using WebApplication10.Controllers
+@using ClassLibrary1
+@model IEnumerable<Person>
+
+@{
+    ViewBag.Title = "viewEventHistory";
+}
+
+<h2>All People</h2>
+
+<div class="col-sm-6 col-sm-offset-4">
+    <a href="/home/AddPeople" class="btn btn-primary">Add people</a>
+</div>
+<br />
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>first name</th>
+        <th>last name</th>
+        <th>age</th>
+    </tr>
+    @foreach (Person p in Model)
+    {
+        <tr>
+            <td>@p.firstName</td>
+            <td>@p.lastName</td>
+            <td>@p.age</td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AddPeople";
+}
+
+<h2>AddPeople</h2>
+
+<form method="post" action="/home/add" id="addform">
+    <button class="btn btn-success" style="margin-top: 40px">SUBMIT</button>
+
+    <div class="row">
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="people[0].firstName" placeholder="first name" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="people[0].lastName" placeholder="last name" />
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="people[0].age" placeholder="age" />
+        </div>
+    </div>
+</form>
+   
+
+<button class="btn btn-primary" style="margin-top: 40px" id="addrows">add more textboxes</button>
+
+
+@section scripts{
+<script src="~/Scripts/addTextBoxes.js"></script>
+    }
+
